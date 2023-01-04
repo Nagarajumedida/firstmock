@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        width: 100%;
+        margin: auto;
+        border: 2px solid red;
+      }
+
+      #container div {
+        width: 250px;
+        height: auto;
+        text-align: center;
+        border: 2px solid black;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+  </body>
+</html>
+<script>
+  var id = localStorage.getItem("single");
+
+  getData(id);
+
+  async function getData(id) {
+    let res = await fetch(`http://localhost:3004/products/${id}`);
+    let data = await res.json();
+    // console.log(data, "data fetched");
+    display(data);
+  }
+
+  function display(data) {
+    console.log(data);
+    let div = document.getElementById("container");
+
+    let img = document.createElement("img");
+    img.src = data.image_url;
+
+    let name = document.createElement("h5");
+    name.innerText = data.book_name;
+
+    let edition = document.createElement("h5");
+    edition.innerText = "Edition " + data.edition;
+
+    let cost = document.createElement("h5");
+    cost.innerText = data.cost;
+
+    div.append(img, name, edition, cost);
+  }
+</script>

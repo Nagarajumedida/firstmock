@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    #container h1{
+        font-size: 16px;
+    }
+</style>
+<body>
+    <div>
+        <h2> <a href="/index.html">Home</a> </h2>
+        <h2> <a href="./signup.html"> Signup</a></h2>
+    </div>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+<script>
+    async function getdata() {
+    let res = await fetch("http://localhost:3004/products");
+    let data = await res.json();
+    displayData(data);
+    // console.log(data, "data fetched");
+  }
+  getdata();
+
+  function displayData(data) {
+
+    
+
+    console.log(data);
+    // document.querySelector("tbody").innerHTML = null;
+    
+    data.forEach((e) => {
+
+      let dabba = document.createElement("div");
+
+       let dabba1 = document.createElement("div");
+       
+      let img = document.createElement("img");
+      img.setAttribute("src", e.image_url);
+      dabba1.append(img)
+
+      let td2 = document.createElement("h1");
+      td2.innerText = e.book_name;
+
+      let td3 = document.createElement("p");
+      td3.innerText = e.author;
+
+      let td4 = document.createElement("p");
+      td4.innerText = e.genre;
+
+      let td5 = document.createElement("p");
+      td5.innerText = e.edition;
+
+      let td6 = document.createElement("p");
+      td6.innerText = e.publisher;
+
+      let td7 = document.createElement("p");
+      td7.innerText = e.cost;
+
+      let td8 = document.createElement("p");
+      td8.innerText = e.borrowed;
+
+      let btn = document.createElement("button")
+      btn.innerText = "Borrow"
+
+    
+
+     dabba.append( img,td2, td3, td4, td5, td6, td7, td8,btn);
+
+     
+      let container = document.getElementById("container")
+      container.append(dabba)
+    });
+  }
+</script> -->

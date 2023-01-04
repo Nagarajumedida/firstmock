@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "image_url": "https://m.media-amazon.com/images/M/MV5BZTkxYmU1NmUtNGE4Ni00OWNmLWE5YzktNTJiZTlmMTIyMTM5XkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_.jpg",
+      "book_name": "Indian economics",
+      "author": "raju",
+      "genre": "business",
+      "edition": "2020",
+      "publisher": "gov  of india",
+      "cost": "5000",
+      "borrowed": true,
+      "id": 1
+    },
+    {
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Anushka_Shetty2.jpg",
+      "book_name": "Indian Economy",
+      "author": "naga",
+      "genre": "business",
+      "edition": "2022",
+      "publisher": "shree printer",
+      "cost": "600",
+      "borrowed": false,
+      "id": 2
+    },
+    {
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsq2VC9cvrLqHo_E9d_f1iq52KKsKUlH_4sFsVL4ucz32DYdDMxgKJ1OV0A5w13nxvTEE&usqp=CAU",
+      "book_name": "biography",
+      "author": "shridhar",
+      "genre": "fiction",
+      "edition": "2020",
+      "publisher": "shree printers",
+      "cost": "3000",
+      "borrowed": false,
+      "id": 3
+    },
+    {
+      "image_url": "https://www.filmibeat.com/img/popcorn/profile_photos/anushka-shetty-20190911155539-1467.jpg",
+      "book_name": "MEDIDA NAGARAJU",
+      "author": "raju2",
+      "genre": "tech",
+      "edition": "2020",
+      "publisher": "juber",
+      "cost": "3000",
+      "borrowed": false,
+      "id": 4
+    }
+  ]
+}
